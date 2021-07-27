@@ -1,0 +1,464 @@
+body{
+    margin: 0;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+
+}
+*,
+*:before,
+*:after
+{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+/* Container----------------------------------------*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header-------------------------------------------*/
+
+.header{
+    width: 100%;
+    height: 282px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__inner{
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+/* Nav-------------------------------------------------*/
+.nav{
+    display:flex;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav__link{
+    color: #000;
+    text-decoration: none;
+    opacity: .75;
+    transition: opacity .1s linear;
+    margin:0 40px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.nav__link:hover {
+    opacity: 1;
+}
+
+
+/* Intro--------------------------------------------*/
+.intro {
+    height: 970px;
+    padding-top: 282px;
+    background-color: #eda14a;
+    justify-content: center;
+    flex-direction: column;/* Каждая строчка с новой строки */
+}
+
+.intro__title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 75px;
+    line-height: 1.1;
+    color: #000;
+    font-weight: 700;
+    margin: 100px 0 80px;
+}
+
+.intro__inner{
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.intro__subtitle{
+    font-size: 35px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+/* Button----------------------------------------*/
+
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    transition: background .1s linear;
+
+
+}
+.btn--black{
+    background-color: #1c1616;
+}
+
+
+.btn--black:hover{
+    background-color: #000;
+}
+.btn--orange{
+    background-color: #de8c2f;
+    border: 1px solid #de8c2f;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 15px;
+
+}
+
+.btn--orange:hover{
+    background-color: #e38314;
+}
+
+
+/* Advantage--------------------------------------------*/
+.advantage{
+    position: absolute;
+    z-index: 1000;
+
+}
+
+
+.advantage__title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: 600;
+    margin-top: 70px;
+    text-align: center;
+
+
+}
+
+.advantage__subtitle{
+    margin: 20px auto 30px;
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.information{
+    margin-bottom: 40px;
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+    text-align: left;
+    margin-left: 10%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.advantage__image{
+    height: 1000px;
+    background-color: #eee;
+    background-image: url(img/advantage.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    opacity: 0.2;
+}
+
+/* Topic--------------------------------------------*/
+
+.topic{
+    background-color: #eda14a;
+    margin: 0;
+
+
+}
+
+.topic__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.topic__title{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto 20px;
+    padding-top: 130px;
+
+}
+
+.topic__subtitle{
+    font-size: 25px;
+    font-weight: 400;
+    color: #000;;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 100px;
+
+}
+
+.topic__item{
+    width: 33%;
+    margin-bottom: 100px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.topic__icon-1{
+    margin:20px 0 29px;
+}
+
+.topic__icon-2{
+    margin-top: 20px;
+    margin-bottom: 28px;
+
+}
+
+.topic__icon-3{
+    margin-bottom: 20px;
+}
+
+
+.item__title{
+    font-size: 25px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.item__text{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    padding: 0 38px;
+}
+
+/* Room Services--------------------------------------------*/
+
+.room__services{
+    position: absolute;
+    z-index: 1000;
+}
+
+.room__inner{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: 600;
+    margin: 200px 0 50px;
+    text-align: center;
+}
+
+.room__info{
+    margin: 10px 300px 50px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+.room__image{
+    height: 700px;
+    width: 100%;
+    background-color: #eee;
+    background-image: url(img/kvartirnyy-pereyezd.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    opacity: 0.2;
+}
+
+.border{
+    width: 100%;
+    height: 15px;
+    background-color: #eda14a;
+    opacity: 0.7;
+}
+
+/* Office Services--------------------------------------------*/
+.office__services{
+    position: absolute;
+    z-index: 1000;
+
+}
+
+.office__inner{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: 600;
+    margin: 200px 0 50px;
+    text-align: center;
+}
+
+.office__info{
+    margin: 10px 300px 50px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+.office__image{
+    height: 700px;
+    width: 100%;
+    background-color: #eee;
+    background-image: url(img/office-pereezd.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    opacity: 0.2;
+}
+
+/* Loader Services--------------------------------------------*/
+.loader__services{
+    position: absolute;
+    z-index: 1000;
+
+}
+
+.loader__inner{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: 600;
+    margin: 200px 200px 50px;
+    text-align: center;
+}
+
+.loader__info{
+    margin: 10px 300px 50px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+.loader__image{
+    height: 800px;
+    width: 100%;
+    background-color: #eee;
+    background-image: url(img/loader-1.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    opacity: 0.2;
+}
+
+/* Connect--------------------------------------------*/
+.connect{
+    background-color: #eda14a;
+}
+
+.connect__title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: 600;
+    padding-top: 100px;
+    text-align: center;
+}
+.connect__info{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 25px;
+    color: #000;
+    font-family: 'Roboto',Arial,sans-serif;
+    padding-bottom: 50px;
+}
+
+.type__connect{
+    font-size: 20px;
+}
+
+.inst__icon{
+    width: 50px;
+    margin-right: 40px;
+    margin-top: 50px;
+    left:660px;
+    top: 377px;
+}
+
+.whatsapp__icon{
+    width: 55px;
+    padding-top: 20px;
+    left: 730px;
+    top: 374px;
+    width: 56px;
+}
+
+.link--line{
+    text-decoration: none;
+}
+
+
+/* Footer--------------------------------------------*/
+
+.footer{
+    width: 100%;
+    height: 120px;
+    background-color: #000;
+    display:flex;
+}
+
+.footer__inner{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    margin: 51px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
