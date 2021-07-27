@@ -83,7 +83,7 @@ p{
     font-size: 75px;
     line-height: 1.1;
     color: #000;
-    font-weight: 300;
+    font-weight: 700;
     margin: 100px 0 80px;
 }
 
@@ -277,13 +277,13 @@ p{
     font-family: 'Open Sans', sans-serif;
     font-size: 60px;
     color: #000;
-    font-weight: 600;
-    margin: 200px 0 50px;
+    font-weight: 500;
+    margin: 100px auto 50px;
     text-align: center;
 }
 
 .room__info{
-    margin: 10px 300px 50px;
+    margin: 10px 15% 50px;
     font-size: 25px;
     font-weight: 500;
     color: #000;
@@ -322,13 +322,13 @@ p{
     font-family: 'Open Sans', sans-serif;
     font-size: 60px;
     color: #000;
-    font-weight: 600;
-    margin: 200px 0 50px;
+    font-weight: 500;
+    margin: 100px auto 50px;
     text-align: center;
 }
 
 .office__info{
-    margin: 10px 300px 50px;
+    margin: 10px 15% 50px;
     font-size: 25px;
     font-weight: 500;
     color: #000;
@@ -360,13 +360,13 @@ p{
     font-family: 'Open Sans', sans-serif;
     font-size: 60px;
     color: #000;
-    font-weight: 600;
-    margin: 200px 200px 50px;
+    font-weight: 500;
+    margin: 100px auto 50px;
     text-align: center;
 }
 
 .loader__info{
-    margin: 10px 300px 50px;
+    margin: 10px 15% 50px;
     font-size: 25px;
     font-weight: 500;
     color: #000;
@@ -437,17 +437,24 @@ p{
 /* Footer--------------------------------------------*/
 
 .footer{
-    width: 100%;
-    height: 120px;
+    padding: 20px 0;
     background-color: #000;
     display:flex;
 }
 
 .footer__inner{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__block{
     text-decoration: none;
     color: #fff;
     font-size: 17px;
     margin: 51px auto;
+
+    text-align: center;
+    width: 33.3333%;
 }
 
 
