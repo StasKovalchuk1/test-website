@@ -133,6 +133,7 @@ p{
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 15px;
+    padding-bottom: 15px;
 
 }
 
@@ -145,6 +146,7 @@ p{
 .advantage{
     position: absolute;
     z-index: 1000;
+    height: 1000px;
 
 }
 
@@ -171,12 +173,11 @@ p{
 }
 
 .information{
-    margin-bottom: 40px;
     font-size: 25px;
     font-weight: 500;
     color: black;
     text-align: left;
-    margin-left: 10%;
+    margin:0 10% 40px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -195,6 +196,7 @@ p{
 .topic{
     background-color: #eda14a;
     margin: 0;
+    height: 730px;
 
 
 }
@@ -268,6 +270,7 @@ p{
 .room__services{
     position: absolute;
     z-index: 1000;
+    height: 688px;
 }
 
 .room__inner{
