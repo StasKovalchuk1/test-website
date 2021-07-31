@@ -196,7 +196,7 @@ p{
 .topic{
     background-color: #eda14a;
     margin: 0;
-    height: 730px;
+
 
 
 }
@@ -270,7 +270,7 @@ p{
 .room__services{
     position: absolute;
     z-index: 1000;
-    height: 688px;
+
 }
 
 .room__inner{
@@ -377,7 +377,7 @@ p{
 
 
 .loader__image{
-    height: 800px;
+    height: 700px;
     width: 100%;
     background-color: #eee;
     background-image: url(img/loader-1.jpg);
@@ -437,7 +437,7 @@ p{
 /* Footer--------------------------------------------*/
 
 .footer{
-    padding: 20px 0;
+    padding: 15px 0;
     background-color: #000;
     display:flex;
 }
@@ -457,6 +457,474 @@ p{
     width: 33.3333%;
 }
 
+/* Burger
+--------------------------------------------*/
+.burger{
+    display: none;
+    background: none;
+    border: 0;
+    padding: 9px 0;
+    cursor: pointer;
+}
+
+.burger__item{
+    display: block;
+    width: 30px;
+    height: 3px;
+
+    background-color: #000;
+    position: relative;
+}
+
+.burger__item:before,
+.burger__item:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.burger__item:before{
+    top: -8px;
+}
+
+.burger__item:after{
+    bottom: -8px;
+}
+
+
+/* Media
+--------------------------------------------*/
+@media (max-width: 1100px) {
+    .room__inner{
+        font-size:50px;
+    }
+    .room__info{
+        font-size: 24px;
+    }
+    .office__inner{
+        font-size:50px;
+    }
+
+    .office__info{
+        font-size: 24px;
+    }
+
+    .loader__inner{
+        font-size:50px;
+    }
+    .loader__info{
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    /* Nav */
+    .nav {
+        display: none;
+    }
+
+     /* Burger */
+    .burger{
+        display: block;
+    }
+
+    /* Intro */
+    .intro__title{
+        font-size: 45px;
+    }
+
+    /* Advantage */
+    .advantage__title{
+        font-size: 45px;
+    }
+
+    .advantage__subtitle{
+        font-size: 25px;
+    }
+
+    .information{
+        font-size: 22px;
+    }
+
+    /* Topic */
+    .topic__title{
+        font-size: 45px;
+        margin: 0 20% 20px
+    }
+
+    .topic__subtitle{
+        font-size: 20px;
+        margin: 0 20% 70px;
+    }
+
+    .topic__item{
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .item__title{
+        margin-bottom: 25px;
+    }
+
+    /* Room */
+    .room__inner{
+        font-size:45px;
+    }
+
+    .room__info{
+        font-size: 20px;
+    }
+
+    /* Office */
+    .office__inner{
+        font-size:45px;
+    }
+
+    .office__info{
+        font-size: 20px;
+    }
+
+    /* Loader */
+    .loader__inner{
+        font-size:45px;
+    }
+
+    .loader__info{
+        font-size: 20px;
+    }
+
+    /* Connect */
+    .connect__title{
+        font-size:45px;
+    }
+    .connect__info{
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footer__block{
+        font-size: 12px;
+        margin:15px auto;
+    }
+
+
+}
+
+
+@media (max-width: 767px) {
+    .intro{
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    .intro__title{
+        font-size: 35px;
+        margin: 100px auto 50px;
+        text-align: center;
+    }
+
+    .intro__subtitle{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .btn--black{
+        transform: translate(-50%, 0);
+        position: relative;
+        left: 50%;
+    }
+
+    .cargo__logo{
+        height: 120px;
+    }
+
+
+    /* Advantage */
+    .advantage__title{
+        font-size: 45px;
+    }
+
+    .advantage__subtitle{
+        font-size: 23px;
+    }
+
+    .information{
+        font-size: 18px;
+    }
+
+    /* Topic */
+    .topic__title{
+        font-size: 35px;
+        margin: 0 auto 20px;
+    }
+
+    .topic__subtitle{
+        font-size: 20px;
+        margin: 0 15% 70px;
+    }
+
+    .topic__item{
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .item__title{
+        margin-bottom: 22px;
+    }
+
+    .item__title{
+        font-size: 20px;
+    }
+
+    .item__text{
+        font-size: 13px;
+    }
+
+    /* Room */
+    .room__inner{
+        font-size:35px;
+    }
+
+    .room__info{
+        font-size: 17px;
+    }
+
+    /* Office */
+    .office__inner{
+        font-size:35px;
+    }
+
+    .office__info{
+        font-size: 17px;
+    }
+
+    /* Loader */
+    .loader__inner{
+        font-size:35px;
+    }
+
+    .loader__info{
+        font-size: 17px;
+    }
+
+    /* Connect */
+    .connect__title{
+        font-size:35px;
+    }
+    .connect__info{
+        font-size: 17px;
+    }
+
+    /* Footer */
+    .footer__block{
+        font-size: 10px;
+        margin: 10px auto;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .intro__title{
+        font-size: 30px;
+        margin: 0px auto 50px;
+        text-align: center;
+    }
+
+    .intro__subtitle{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .btn--black{
+        transform: translate(-50%, 0);
+        position: relative;
+        left: 50%;
+        padding: 12px 20px;
+        font-size: 10px;
+    }
+
+    .cargo__logo{
+        height: 110px;
+    }
+
+    /* Advantage */
+    .advantage__title{
+        font-size: 35px;
+    }
+
+    .advantage__subtitle{
+        font-size: 20px;
+    }
+
+    .information{
+        font-size: 15px;
+    }
+
+    /* Room */
+    .room__inner{
+        font-size:32px;
+        margin-bottom: 25px;
+    }
+
+    .room__info{
+        font-size: 15px;
+    }
+
+    /* Office */
+    .office__inner{
+        font-size:32px;
+        margin-bottom: 25px;
+    }
+
+    .office__info{
+        font-size: 15px;
+    }
+
+    /* Loader */
+    .loader__inner{
+        font-size:32px;
+        margin-bottom: 25px;
+    }
+
+    .loader__info{
+        font-size: 15px;
+    }
+
+    /* Connect */
+    .connect__title{
+        font-size:30px;
+    }
+    .connect__info{
+        font-size: 15px;
+    }
+
+    /* Footer */
+    .footer__block{
+        width: 100%;
+    }
+}
+
+@media (max-width: 413px) {
+    .intro__title{
+        font-size: 25px;
+        margin: 0px auto 50px;
+        text-align: center;
+    }
+
+    .intro__subtitle{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .btn--black{
+        transform: translate(-50%, 0);
+        position: relative;
+        left: 50%;
+        padding: 10px 20px;
+        font-size: 9px;
+    }
+
+    .cargo__logo{
+        height: 80px;
+    }
+
+    /* Advantage */
+    .advantage__title{
+        font-size: 30px;
+    }
+
+    .advantage__subtitle{
+        font-size: 15px;
+    }
+
+    .information{
+        font-size: 15px;
+    }
+
+    /* Topic */
+    .topic__title{
+        font-size: 30px;
+        margin: 0 auto 20px;
+    }
+
+    .topic__subtitle{
+        font-size: 15px;
+        margin: 0 15% 40px;
+    }
+
+    .topic__item{
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .item__title{
+        margin-bottom: 18px;
+        font-size: 18px;
+    }
+
+    .item__text{
+        font-size: 12px;
+        padding-bottom: 0;
+    }
+
+    /* Room */
+    .room__inner{
+        font-size:23px;
+        margin-bottom: 25px;
+        margin-top: 50px;
+    }
+
+    .room__info{
+        font-size: 15px;
+    }
+
+    /* Office */
+    .office__inner{
+        font-size:23px;
+        margin-bottom: 25px;
+        margin-top: 50px;
+    }
+
+    .office__info{
+        font-size: 15px;
+    }
+
+    /* Loader */
+    .loader__inner{
+        font-size:23px;
+        margin-bottom: 25px;
+        margin-top: 50px;
+    }
+
+    .loader__info{
+        font-size: 15px;
+    }
+
+    /* Connect */
+    .connect__title{
+        font-size:25px;
+    }
+    .connect__info{
+        font-size: 13px;
+    }
+
+    .type__connect{
+        font-size: 15px;
+    }
+
+    /* Footer */
+    .footer__block{
+        width: 100%;
+        font-size: 10px;
+    }
+}
 
 
 
