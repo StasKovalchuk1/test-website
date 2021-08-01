@@ -499,6 +499,13 @@ p{
 
 /* Media
 --------------------------------------------*/
+@media (max-width: 1166px) {
+    .nav{
+        font-size: 15px;
+    }
+}
+
+
 @media (max-width: 1100px) {
     .room__inner{
         font-size:50px;
@@ -522,17 +529,20 @@ p{
     }
 }
 
-
-@media (max-width: 991px) {
-
-    /* Nav */
-    .nav {
-        display: none;
+@media (max-width: 1032px) {
+    .cargo__logo{
+        height: 180px;
     }
 
-     /* Burger */
-    .burger{
-        display: block;
+    .nav__link{
+        margin: 0 20px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .cargo__logo{
+        height: 160px;
     }
 
     /* Intro */
@@ -617,8 +627,23 @@ p{
 
 }
 
+@media (max-width: 800px) {
+    .nav__link{
+        margin: 0 18px;
+    }
+}
+
 
 @media (max-width: 767px) {
+    /* Nav */
+    .nav {
+        display: none;
+    }
+    /* Burger */
+    .burger{
+        display: block;
+    }
+
     .intro{
         height: auto;
         padding-bottom: 100px;
@@ -642,7 +667,7 @@ p{
     }
 
     .cargo__logo{
-        height: 120px;
+        height: 130px;
     }
 
 
@@ -749,6 +774,10 @@ p{
         padding: 12px 20px;
         font-size: 10px;
     }
+     .btn--orange{
+        padding: 12px 20px;
+        font-size: 10px;
+    }
 
     .cargo__logo{
         height: 110px;
@@ -774,7 +803,9 @@ p{
     }
 
     .room__info{
-        font-size: 15px;
+        font-size: 16px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     /* Office */
@@ -784,7 +815,9 @@ p{
     }
 
     .office__info{
-        font-size: 15px;
+        font-size: 16px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     /* Loader */
@@ -794,7 +827,9 @@ p{
     }
 
     .loader__info{
-        font-size: 15px;
+        font-size: 16px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     /* Connect */
@@ -802,6 +837,10 @@ p{
         font-size:30px;
     }
     .connect__info{
+        font-size: 15px;
+    }
+
+    .type__connect{
         font-size: 15px;
     }
 
@@ -881,10 +920,6 @@ p{
         margin-top: 50px;
     }
 
-    .room__info{
-        font-size: 15px;
-    }
-
     /* Office */
     .office__inner{
         font-size:23px;
@@ -892,19 +927,11 @@ p{
         margin-top: 50px;
     }
 
-    .office__info{
-        font-size: 15px;
-    }
-
     /* Loader */
     .loader__inner{
         font-size:23px;
         margin-bottom: 25px;
         margin-top: 50px;
-    }
-
-    .loader__info{
-        font-size: 15px;
     }
 
     /* Connect */
@@ -926,7 +953,11 @@ p{
     }
 }
 
-
+@media (max-width: 307px) {
+    .information{
+        margin-bottom: 20px;
+    }
+}
 
 
 
