@@ -6,6 +6,7 @@ body{
     color: #6c7279;
 
 }
+
 *,
 *:before,
 *:after
@@ -49,12 +50,15 @@ p{
 
 .header.fixed .header__inner {
     padding: 10px 0;
-    border-bottom: 0 ;
+    border-bottom: 0;
 }
+
 
 .header.fixed .cargo__logo {
     display: none;
 }
+
+
 
 .header__inner{
     padding: 35px 0;
@@ -142,7 +146,7 @@ p{
 .btn--black:hover{
     background-color: #000;
 }
-.btn--orange{
+.btn__orange{
     background-color: #de8c2f;
     border: 1px solid #de8c2f;
     position: relative;
@@ -153,7 +157,7 @@ p{
 
 }
 
-.btn--orange:hover{
+.btn__orange:hover{
     background-color: #e38314;
 }
 
@@ -474,6 +478,129 @@ p{
     bottom: -8px;
 }
 
+/* Form--------------------------------------------
+*/
+.form__backend {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    overflow: hidden;
+    position: fixed;
+    display:none;
+    top: 0px;
+    left: 0px;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.form__backend.show {
+    display: flex;
+}
+
+
+.form {
+    border: 1px solid #000;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 450px;
+    height: 500px;
+    padding: 30px;
+    margin: auto;
+
+}
+
+.form__label {
+    display: flex;
+    margin-bottom: 5px;
+    flex-direction: column;
+}
+
+.form h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #000;
+    font-weight: 700;
+}
+
+.form__label span {
+    flex-grow: 1;
+    display: inline-block;
+    font-size: 18px;
+    color: #000;
+    margin-top: 25px;
+}
+
+.form button {
+    background-color: #000;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 14px 155px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.form__input {
+    height: 50px;
+    width: 390px;
+}
+
+.form__input._error .form__input{
+    border-color: red;
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 50px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #fff;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.checkbox {
+    margin-top: 10px;
+    margin-left: -5px;
+}
+
+.checkbox._error .checkbox__input{
+    box-shadow: 0 0 15px red;
+}
+
+.checkbox span{
+    font-size: 13px;
+    color: #000;
+}
+
+.js-validate-error-label {
+    margin-top: 5px;
+}
 
 /* Media
 --------------------------------------------*/
@@ -512,15 +639,40 @@ p{
         height: 180px;
     }
 
-    .nav__link{
-        margin: 0 20px;
-    }
 }
 
 
 @media (max-width: 991px) {
+    /* Nav */
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+        background-color: #eda14a;
+        text-align: right;
+
+        position:absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .nav.show{
+        display: flex;
+    }
+
+    .nav__link{
+        padding: 10px 15px;
+    }
+
+
     .cargo__logo{
         height: 160px;
+    }
+
+    /* Burger */
+    .burger{
+        display: block;
     }
 
     /* Intro */
@@ -605,41 +757,9 @@ p{
 
 }
 
-@media (max-width: 800px) {
-    .nav__link{
-        margin: 0 18px;
-    }
-}
-
 
 @media (max-width: 767px) {
-    /* Nav */
-    .nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
 
-        background-color: #eda14a;
-        text-align: right;
-
-        position:absolute;
-        top: 100%;
-        right: 0;
-
-
-    }
-
-    .nav.show{
-        display: flex;
-    }
-
-    .nav__link{
-        padding: 10px 15px;
-    }
-    /* Burger */
-    .burger{
-        display: block;
-    }
 
     .intro{
         height: auto;
@@ -771,7 +891,7 @@ p{
         padding: 12px 20px;
         font-size: 10px;
     }
-     .btn--orange{
+     .btn__orange{
         padding: 12px 20px;
         font-size: 10px;
     }

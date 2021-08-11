@@ -1,12 +1,24 @@
 <!doctype html>
-<html>
+<html lang="ru">
     <head>
         <meta charset = "utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <title>testWebsite</title>
+
+        <!--Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/Favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/Favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/Favicons/favicon-16x16.png">
+        <link rel="manifest" href="img/Favicons/site.webmanifest">
+        <link rel="mask-icon" href="img/Favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#fbf4f4">
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
 
@@ -63,7 +75,6 @@
 
 
 
-
         <!-- Topic -->
         <div class="topic" id="topic">
             <div class="container">
@@ -89,18 +100,18 @@
             </div>
         </div>
 
-
         <!-- Room Services -->
         <div class="room__services" id="room__services">
              <div class="overlay">
                   <h1 class="room__inner">Квартирный переезд</h1>
                   <p class="room__info">Квартирный переезд - дело нелёгкое и хлопотное, а сам переезд часто сравнивают с пожаром. Это не удивительно, ведь люди, столкнувшиеся с необходимостью переезда, порой не знают, с какой стороны подойти к этому деликатному процессу. Доверьте Ваши хлопоты по переезду нашим специалистам, и Вы перестанете сравнивать переезд с пожаром. Накопленный за годы деятельности нашей компании опыт позволяет легко справляться даже с самыми тяжёлыми задачами.</p>
-                 <button class="btn btn--orange">Оставить заявку</button>
+                 <button class="btn btn__orange" id="btn__orange">Оставить заявку</button>
              </div>
         </div>
 
-        <div class="border"></div>
 
+
+        <div class="border"></div>
 
         <!-- Office Services -->
         <div class="office__services">
@@ -109,20 +120,23 @@
                    <p class="office__info">Любой переезд - это довольно хлопотливое событие, как бы его не планировали и тщательно не продумывали - всё равно он всегда будет не кстати.
                    Одним словом, своими силами с этой задачей справиться нелегко.
                    Опытные сотрудники нашей компании избавят Вас от головной боли, которую может доставить Вам переезд. Благодаря нам Ваш переезд пройдёт спокойно, слаженно и без хлопот.</p>
-                   <button class="btn btn--orange">Оставить заявку</button>
+                   <button class="btn btn__orange" id="btn__orange">Оставить заявку</button>
               </div>
         </div>
 
         <div class="border"></div>
+
 
         <!-- Loader Services -->
         <div class="loader__services">
             <div class="overlay">
                 <h1 class="loader__inner">Услуги профессиональных грузчиков</h1>
                 <p class="loader__info">Поберегите свои силы, нервы и здоровье. Доверьте тяжелую работу профессионалам. Сотрудники нашей компании - это крепкие, подготовленные люди, имеющие большой опыт в выполнении погрузочно-разгрузочных и такелажных работ. При выполнении работ обязательно используются такелажные ремни, что значительно сокращает время погрузки-разгрузки, спуска-подъёма габаритной мебели, бытовой техники, пианино, роялей, сейфов, промышленного оборудования и т.п.</p>
-                <button class="btn btn--orange">Оставить заявку</button>
+                <button class="btn btn__orange" id="btn__orange">Оставить заявку</button>
             </div>
         </div>
+
+
 
 
        <!-- Connect -->
@@ -164,8 +178,33 @@
         </footer>
 
 
-        <!--     Javascript      -->
 
+        <div class="form__backend" id="form__backend">
+           <span class="close" id="close"></span>
+            <form action="mail.php" class="form" id="form" method="POST">
+                <input type="hidden" name="admin_email[]" value="stskovalchuk@gmail.com">
+                <input type="hidden" name="form_subject" value="Тема письма">
+                <h2 class="">Оставьте заявку на перевозку!</h2>
+                <label for="formName" class="form__label">
+                    <span>Введите имя</span>
+                </label>
+                <input id="formName" type="text" name="name" class="form__input _req" placeholder="Иван">
+                <label for="formTel" class="form__label">
+                   <span>Введите телефон</span>
+                </label>
+                <input id="formTel" type="tel" name="phone" class="form__input _req _tel" data-validate-field="tel" placeholder="+7(999) 999-99-99">
+                <button type="submit" class="form__button">Отправить</button>
+                <div class="checkbox">
+                    <input id="formArgeement" checked type="checkbox" name="agreement" class="checkbox__input _req" data-validate-field="checkbox">
+                    <label for="formAgreement"><span>Я даю свое согласие на обработку персональных данных</span></label>
+                </div>
+            </form>
+        </div>
+
+
+        <!--     Javascript      -->
+   <script src="inputmask.min.js"></script>
+   <script src="just-validate.min.js"></script>
    <script src="app.js"></script>
 
     </body>
