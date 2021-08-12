@@ -182,20 +182,26 @@
         <div class="form__backend" id="form__backend">
            <span class="close" id="close"></span>
             <form action="mail.php" class="form" id="form" method="POST">
-                <input type="hidden" name="admin_email[]" value="stskovalchuk@gmail.com">
-                <input type="hidden" name="form_subject" value="Тема письма">
+
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="testWebsite">
+                <input type="hidden" name="admin_email" value="stskovalchuk@gmail.com">
+                <input type="hidden" name="form_subject" value="Form">
+                <!-- END Hidden Required Fields -->
+
+
                 <h2 class="">Оставьте заявку на перевозку!</h2>
                 <label for="formName" class="form__label">
                     <span>Введите имя</span>
                 </label>
-                <input id="formName" type="text" name="name" class="form__input _req" placeholder="Иван">
+                <input id="formName" type="text" name="Имя" class="form__input _req" placeholder="Иван">
                 <label for="formTel" class="form__label">
                    <span>Введите телефон</span>
                 </label>
-                <input id="formTel" type="tel" name="phone" class="form__input _req _tel" data-validate-field="tel" placeholder="+7(999) 999-99-99">
+                <input id="formTel" type="tel" name="Телефон" class="form__input _req _tel" data-validate-field="tel" placeholder="+7(999) 999-99-99" value="Phone " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone ';}">
                 <button type="submit" class="form__button">Отправить</button>
                 <div class="checkbox">
-                    <input id="formArgeement" checked type="checkbox" name="agreement" class="checkbox__input _req" data-validate-field="checkbox">
+                    <input id="formArgeement" checked type="checkbox" name="Соглашение" class="checkbox__input _req" data-validate-field="checkbox">
                     <label for="formAgreement"><span>Я даю свое согласие на обработку персональных данных</span></label>
                 </div>
             </form>
