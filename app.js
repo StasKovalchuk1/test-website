@@ -120,17 +120,16 @@ im.mask(selector);
 $(document).ready(function() {
 
     //E-mail Ajax Send
-    $("form").submit(function() { //Change
-        var th = $(this);
+    $("form").submit(function() {
+        var form = $(this);
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
-            data: th.serialize()
+            url: "mail.php",
+            data: form.serialize()
         }).done(function() {
             alert("Данные отправлены!");
             setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
+                form.trigger("reset");
             }, 1000);
         });
         return false;
